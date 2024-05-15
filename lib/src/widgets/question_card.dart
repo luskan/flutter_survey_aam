@@ -57,7 +57,7 @@ class QuestionCard extends StatelessWidget {
         builder: (FormFieldState<List<String>> state) {
           String questionText = question.question;
           String bracketText = "";
-          final style = questionStyle ?? Theme.of(context).textTheme.bodyText1;
+          final style = questionStyle ?? Theme.of(context).textTheme.bodyLarge;
           final isBracket = RegExp(r'\([^)]*\)').hasMatch(question.question);
           if (isBracket) {
             questionText = RegExp(r'(.+?)\s*\(').firstMatch(question.question)?.group(1) ?? "";
